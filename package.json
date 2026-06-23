@@ -1,0 +1,31 @@
+{
+  "name": "qa-portfolio",
+  "version": "1.0.0",
+  "description": "QA automation portfolio \u2014 Playwright + TypeScript E2E and API tests, CI/CD, and manual QA artifacts. Targets public demo apps only.",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/",
+    "test:api": "playwright test api/",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "perf": "k6 run performance/k6-smoke.js",
+    "test:a11y": "playwright test tests/accessibility.spec.ts"
+  },
+  "keywords": [
+    "qa",
+    "playwright",
+    "typescript",
+    "automation",
+    "e2e",
+    "api-testing"
+  ],
+  "author": "Nataliia Stetsyk",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.0",
+    "typescript": "^5.6.0",
+    "@axe-core/playwright": "^4.10.0",
+    "dotenv": "^16.3.1"
+  }
+}
